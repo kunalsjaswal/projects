@@ -6,22 +6,12 @@ var hh=document.getElementById("hh");
 function golight() {
     body.style.background = "white";
     slider.style.marginLeft = "-5%";
-    header.style.background = "rgb(228, 214, 187)";
-    searchbar.style.background = "white";
-    searchbt.style.background = "white";
-    searchbar.style.color = "black";
-    searchbt.style.color = "black";
     hh.style.color = "black";
 }
 
 function godark() {
     body.style.background = "black";
     slider.style.marginLeft = "70%";
-    header.style.background = "red";
-    searchbar.style.background = "black";
-    searchbt.style.background = "black";
-    searchbar.style.color = "white";
-    searchbt.style.color = "white";
     hh.style.color = "white";
 }
 
@@ -41,3 +31,51 @@ function showlist() {
     count++;
 }
 
+shls=0
+function showlist() {
+    if (shls % 2 == 0) {
+        ul2.style.display = "block";
+    }
+    else {
+        ul2.style.display = "none";
+    }
+    shls++;
+}
+
+
+function borders() {
+    sellbd.style.borderBottom = "5px solid white";
+}
+function bordersout() {
+    sellbd.style.borderBottom = "0px";
+}
+function borders1() {
+    rentbd.style.borderBottom = "5px solid white";
+}
+function bordersout1() {
+    rentbd.style.borderBottom = "0px";
+}
+function borders2() {
+    buybd.style.borderBottom = "5px solid white";
+}
+function bordersout2() {
+    buybd.style.borderBottom = "0px";
+}
+
+
+function expanditemsfnx() {
+    expanditems.style.display = "block";
+    expandsale.style.display = "none";
+
+}
+function expanditemsfnx1() {
+    expandsale.style.display = "block";
+    expanditems.style.display = "none";
+
+}
+function closeitemsfnx() {
+    expanditems.style.display = "none";
+}
+function closeitemsfnx1() {
+    expandsale.style.display = "none";
+}

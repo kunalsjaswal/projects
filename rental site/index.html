@@ -13,6 +13,12 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <title>Buy || Borrow</title>
+    <style>
+      #header {
+        background-image: url("img/ss2.jpg");
+        background-size: cover;
+      }
+    </style>
   </head>
 
   <body id="body">
@@ -20,13 +26,23 @@
     <header id="header">
       <img src="img/fevicon.png" alt="" />
 
+      <input type="search" name="" id="searchbar" />
+      <input type="button" value="search" id="searchbt" />
       <div class="navs" id="navs">
         <ul>
           <li>
-            <a href="">Rental Notification</a>
+            <a href=""
+              ><img src="img/notification.png" alt="" />Rental Notification</a
+            >
           </li>
-          <li><a href="">Messages</a></li>
-          <li><a href="">Cart</a></li>
+          <li>
+            <a href=""
+              ><img src="img/message.png" alt="" class="m2" />Messages</a
+            >
+          </li>
+          <li>
+            <a href=""><img src="img/cart.png" alt="" class="c2" />Cart</a>
+          </li>
         </ul>
       </div>
       <img src="img/profile.png" alt="" class="profile" />
@@ -40,9 +56,104 @@
     </div>
 
     <div class="add1">
-      <img src="img/ADDS.jpg" alt="" />
+      <div class="add11">
+        <div class="newitems" onclick="expanditemsfnx()">New Items</div>
+        <div id="expanditems">
+          <div class="bar1" onclick="closeitemsfnx()"></div>
+          <div class="bar2" onclick="closeitemsfnx()"></div>
+          <h1>New Items</h1>
+          <img src="img/deal2.jpeg" alt="" />
+        </div>
+
+        <div class="sale" onclick="expanditemsfnx1()">Sale</div>
+        <div id="expandsale">
+          <div class="bar1" onclick="closeitemsfnx1()"></div>
+          <div class="bar2" onclick="closeitemsfnx1()"></div>
+          <h1>Sale</h1>
+          <img src="img/deal2.jpeg" alt="" />
+        </div>
+      </div>
     </div>
 
+    <!-- explore  -->
+    <div class="explore">
+      <ul>
+        <li class="renthover">
+          <div class="rent" id="rentbd">Rent Corner</div>
+          <div
+            id="displaylist"
+            onmouseover="borders1()"
+            onmouseleave="bordersout1()"
+          >
+            <div class="list1">
+              <a class="" href="#">Clothes</a>
+              <a class="" href="#">Food</a>
+              <a class="" href="#">Medicine</a>
+              <a class="" href="#">Vehicles</a>
+              <a class="" href="#">utensils</a>
+            </div>
+            <div class="list2">
+              <a class="" href="#">Software</a>
+              <a class="" href="#">electronics</a>
+              <div id="expandlist1" onclick="showlist()">Regular Items ></div>
+              <div class="regitem" id="ul2">
+                <a class="" href="#">dishwasher</a>
+                <a class="" href="#">iron</a>
+                <a class="" href="#">wrench</a>
+                <a class="" href="#">clips</a>
+              </div>
+              <a class="" href="#">musical instrument</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="buyhover">
+          <div class="buyy" id="buybd">Buy Corner</div>
+          <div
+            id="displaylist2"
+            onmouseover="borders2()"
+            onmouseleave="bordersout2()"
+          >
+            <div class="list1">
+              <a class="" href="#">Grocery</a>
+              <a class="" href="#">Medicines</a>
+              <a class="" href="#">Hardware</a>
+              <a class="" href="#">Software</a>
+              <a class="" href="#">Clothes</a>
+              <a class="" href="#">Food shops</a>
+            </div>
+            <div class="list2">
+              <a class="" href="#">electronics</a>
+              <a class="" href="#">mechanics/repair</a>
+              <a class="" href="#">stationary</a>
+              <a class="" href="#">parlour</a>
+              <a class="" href="#">musical instrument</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="sellhover">
+          <div class="sell" id="sellbd">Seller Corner</div>
+          <div
+            id="displaylist3"
+            onmouseover="borders()"
+            onmouseleave="bordersout()"
+          >
+            <div class="list1">
+              <a class="" href="#">Grocery</a>
+              <a class="" href="#">Medicines</a>
+              <a class="" href="#">Hardware</a>
+              <a class="" href="#">Software</a>
+              <a class="" href="#">Food shops</a>
+            </div>
+            <div class="list2">
+              <a class="" href="#">Clothes</a>
+              <a class="" href="#">Groceries</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
     <!-- best deals add  -->
     <div
       id="carouselExampleDark"
@@ -71,8 +182,7 @@
           aria-label="Slide 3"
         ></button>
       </div>
-      <input type="search" name="" id="searchbar" />
-      <input type="button" value="search" id="searchbt" />
+
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="2000">
           <img src="img/add1.jpg" class="d-block w-100" alt="..." />
@@ -116,20 +226,9 @@
       </button>
     </div>
 
-    <div class="add1">
-      <img src="img/ADDS.jpg" alt="" />
-    </div>
+    <div class="add1"></div>
 
     <img src="img/trend design.jpg" alt="" class="trend" />
-
-    <div class="explore">
-      <h2>Explore</h2>
-      <ul>
-        <li><a href="rentals.html" target="_blank">Rent Corner</a></li>
-        <li><a href="buyers.html" target="_blank">Buy Corner</a></li>
-        <li><a href="sellers.html" target="_blank">Seller Corner</a></li>
-      </ul>
-    </div>
 
     <script src="script/script.js"></script>
     <script

@@ -12,7 +12,7 @@ body {
   position: absolute;
   width: 5vw;
   height: 1.2vw;
-  margin-top: -2%;
+  margin-top: 1%;
   right: 2%;
   z-index: 6;
 }
@@ -64,11 +64,12 @@ body {
 
 header {
   width: 100%;
-  background-color: rgb(228, 214, 187);
   padding: 1%;
   height: 12vw;
   transition: 1s;
+  border: 1px solid black;
 }
+
 header img {
   width: 8%;
   margin-left: 3%;
@@ -81,40 +82,55 @@ header img {
   left: 0%;
   margin-top: 8%;
   width: 100%;
-  background-color: rgb(125, 218, 187);
 }
 .navs ul {
   list-style-type: none;
-  margin-top: 0%;
 }
 .navs ul li {
   float: left;
   text-align: center;
   height: 3vw;
   margin-left: 0%;
-  width: 15%;
+  width: 14%;
   font-size: 1.2vw;
   transition: 0.5s;
   padding-top: 0.5%;
 }
+header li img {
+  position: absolute;
+  width: 2.2%;
+  border-radius: 20%;
+  margin-top: -0.2%;
+  margin-left: -2.2%;
+}
+.m2 {
+  margin-left: -2.2%;
+}
+.c2 {
+  margin-left: -2.2%;
+}
 .navs ul li:nth-child(1) {
-  margin-left: 50%;
+  margin-left: 64%;
+}
+.navs ul li:nth-child(2) {
+  margin-left: -2%;
 }
 .navs ul li:nth-child(3) {
-  margin-left: -4%;
+  margin-left: -4.8%;
 }
 
 .navs ul a {
   text-decoration: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.877);
+  padding: 2% 5%;
   color: black;
   transition: 1s;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 4% 8%;
 }
 .navs ul a:hover {
-  background-color: black;
-  color: white;
   text-decoration: underline;
+  padding: 6% 5%;
 }
 
 header .profile {
@@ -148,21 +164,21 @@ header .profile {
 
 #searchbar {
   position: absolute;
-  z-index: 2;
+  z-index: 7;
   transition: 1s;
-  right: 10%;
+  left: 38%;
   background-color: rgb(245, 244, 244);
-  margin-top: 2%;
+  margin-top: 8.5%;
   border: outset;
-  width: 25%;
+  width: 15%;
   font-size: 1.2vw;
 }
 #searchbt {
   position: absolute;
-  z-index: 2;
+  z-index: 7;
   transition: 1s;
-  right: 2%;
-  margin-top: 2%;
+  left: 53.2%;
+  margin-top: 8.555%;
   font-size: 1.2vw;
 }
 
@@ -177,11 +193,81 @@ div.add1 {
   margin-top: 1vw;
   float: left;
 }
-div.add1 img {
-  height: 20vw;
-  width: 100%;
+.add1 .newitems,
+.sale {
+  border: outset;
+  margin-top: 50%;
+  font-size: 2vw;
+  box-shadow: 5px 5px 5px black;
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.966),
+    rgba(128, 128, 128, 0.986)
+  );
+}
+.sale {
+  margin-top: 15%;
+}
+.sale:hover,
+.newitems:hover {
+  border: inset;
+  cursor: pointer;
+  box-shadow: 0 0 0 black;
+  border-bottom: 5px solid green;
+}
+.add1 .add11 {
+  margin-top: 25%;
+  transition: 1s;
+  width: 80%;
+  height: 18vw;
+  margin-left: 7%;
 }
 
+#expanditems,
+#expandsale {
+  position: absolute;
+  width: 70%;
+  z-index: 5;
+  margin-left: 15%;
+  margin-top: -6%;
+  height: 30vw;
+  border: 1px solid black;
+  color: white;
+  background: rgba(56, 55, 55, 0.938);
+  display: none;
+}
+#expandsale {
+  margin-top: -11%;
+}
+.bar1,
+.bar2 {
+  position: absolute;
+  background-color: white;
+  width: 4%;
+  height: 5px;
+  margin-left: 95%;
+  cursor: pointer;
+}
+.bar1 {
+  margin-top: 2%;
+  transform: rotate(45deg) translate(9px, 1px);
+}
+.bar2 {
+  margin-top: 2.3%;
+  transform: rotate(-45deg) translate(2px, 5px);
+}
+#expanditems h1,
+#expandsale h1 {
+  font-size: 4vw;
+  text-align: center;
+}
+#expanditems img,
+#expandsale img {
+  width: 25%;
+  margin-left: 37%;
+  margin-top: 5%;
+}
 /* rent  */
 
 img.trend {
@@ -217,34 +303,122 @@ img.trend {
 /* explore */
 
 .explore {
-  border: inset;
-  position: absolute;
-  margin-top: -40%;
-  padding: 1%;
-  color: white;
-  background-color: rgb(235, 238, 237);
-  margin-left: 0.5%;
+  border: inset white;
+  width: 100%;
+  height: 3vw;
+  background-color: #0070cf;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-.explore h2 {
-  font-size: 2vw;
-  color: black;
 }
 
 .explore ul {
   list-style-type: none;
   list-style-position: inside;
 }
+
 .explore ul li {
-  margin-top: 10%;
+  float: left;
+  margin-left: 04%;
+  width: 10%;
 }
-.explore li a {
+.rent,
+.buyy,
+.sell {
+  width: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.2vw;
-  color: rgb(32, 57, 167);
+  cursor: pointer;
+  color: white;
   font-weight: bold;
   transition: 0.5s;
+  padding-bottom: 6%;
+  text-align: center;
 }
-.explore li a:hover {
-  color: red;
+.rent:hover,
+.buyy:hover,
+.sell:hover {
+  color: white;
+  background-color: rgba(109, 110, 109, 0.842);
+}
+
+#displaylist,
+#displaylist2,
+#displaylist3 {
+  position: absolute;
+  margin-top: 0%;
+  width: 50%;
+  height: 60%;
+  z-index: 5;
+  margin-top: 2.6%;
+  animation: explore 0.5s linear 0s 1 alternate;
+  background-color: #006ecfe5;
+  display: none;
+}
+#displaylist2 {
+  margin-top: 0%;
+}
+#displaylist3 {
+  margin-left: 0.8%;
+}
+
+.renthover:hover #displaylist {
+  display: block;
+}
+.buyhover:hover #displaylist2 {
+  display: block;
+}
+.sellhover:hover #displaylist3 {
+  display: block;
+}
+@keyframes explore {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 60%;
+  }
+}
+
+.list1 {
+  width: 20%;
+  margin-left: 20%;
+  margin-top: 5%;
+  float: left;
+  border-right: 5px solid black;
+}
+.list1 a,
+.list2 a {
+  font-size: 1.5vw;
+  margin-top: 10%;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+.list2 {
+  width: 30%;
+  float: left;
+  margin-top: 4%;
+  margin-left: 5%;
+}
+#expandlist1 {
+  color: white;
+  font-size: 1.5vw;
+  margin-top: 10%;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.349);
+}
+.regitem {
+  display: none;
+}
+#ul2 {
+  background-color: rgba(0, 0, 0, 0.349);
+  margin-left: 10%;
+}
+#ul2 a {
+  margin-top: 2%;
+}
+
+#displaylist a:hover,
+#displaylist2 a:hover,
+#displaylist3 a:hover {
+  text-decoration: underline;
 }
